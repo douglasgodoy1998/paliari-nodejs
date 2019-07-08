@@ -679,3 +679,17 @@ it('valor 340,11 deve retornar tres notas de 100, duas de 20, uma moeda de 10, e
 
   expect(Troco.getQtdeNotas(340.11)).toEqual(expected)
 });
+
+
+
+it('valor 15502,96 deve retornar: 155 notas de 100,  uma nota de 2, uma moeda de 50, uma moeda de 25,duas moedas de 10 e uma moeda de 1 centavo', () => {
+  const expected = {
+    '100': 155,
+    '2': 1,
+    '0.5':1,
+    '0.25':1,
+    '0.1':2,
+    '0.01':1  }
+
+  expect(Troco.getQtdeNotas(15502.96)).toEqual(expected)
+});
